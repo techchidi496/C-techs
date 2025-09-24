@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Responsive layout 2</title>
+<style>
+	* {
+		box-sizing: border-box;
+	}	
+	body {
+		background-color:#f1f1f1;
+		font-family: arial,helvetica,sans-serif;
+		padding: 10px;
+	}
+	.header{
+		background: white;
+		padding:20px;
+		text-align:center;
+	}
+	.header h1 {
+		font-size: 50px;
+		color: black;
+	}
+	.topnav {
+		overflow:hidden;
+		background-color: #333;
+	}
+	.topnav a{
+		color: #f2f2f2;
+		float: left;
+		display: block;
+		padding: 14px 16px;
+		text-align: center;
+		text-decoration:none;
+	}
+	.topnav a:hover:not(active){
+		background-color: #ddd;
+		color: black;
+	}
+	.leftcolumn{
+		width: 75%;
+		float: left;
+	}
+	.rightcolumn {
+		width: 25%;
+		float: left;
+		padding: 20px;
+		background-color: #f1f1f1;
+	}
+	.fakeimg {
+		background-color: #aaa;
+		width: 100%;
+		padding: 20px;
+		
+	}
+	.card {
+		background-color: white;
+		margin-top: 20px;
+		padding: 20px;
+	}
+	.row::after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.footer{
+		background: #ddd;
+		text-align: center;
+		padding:20px;
+		margin-top: 20px;
+	}
+	.footer:hover:not(active){
+		background-color: #333;
+		color: white;
+	}
+		
+	@media screen and (max-width:800px){
+		.letfcolumn, .rightcolumn {
+			width: 100%;
+			padding: 0;
+		}
+	}
+	@media screen and (max-width:400px){
+		.topnav a{
+			float: none;
+			width:100%;
+		}
+	}
+</style>
+</head>
+<body>
+	
+<div class="header">
+ <h1>My text website.</h1>
+ <p>Resize browser to see the effect of the responsive website.</p>
+</div>
+	
+<div class="topnav">
+<a href="#">Home</a>
+<a href="#">News</a>
+<a href="#">Travels</a>
+<a href="#" style="float:right">About</a>	
+</div>
+
+<div class="row">
+ <div class="leftcolumn">
+  <div class="card">
+	 <h2>TITLE HEADING.</h2>
+	 <h5>Title description, sep 2, 20204</h5>
+	 <div class="fakeimg" style="height:200px;">Image</div>
+	 <p>Some text..</p>
+     <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p> 
+   </div>
+ <div class="card">
+	 <h2>TITLE HEADING</h2>	 
+	 <h5>Title description, sep 2, 2024</h5>
+	 <div class="fakeimg" style="height:200px;">Image</div>
+	 <p>Some text..</p>
+     <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p> 
+  </div>
+ </div>
+<div class="rightcolumn">
+ <div class="card">
+   <h2>About Me.</h2>
+   <div class="fakeimg" style="height:200px;">image</div>
+   <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+ </div>
+<div class="card">
+	<h3>Popular Post</h3>
+	<div class="fakeimg"><p>image</p></div>
+	<div class="fakeimg"><p>image</p></div>
+	<div class="fakeimg"><p>image</p></div>
+</div>
+<div class="card">
+	<h3>Folloe Me.</h3>
+	<p>Some Text...</p>
+  </div>
+ </div>	
+</div>
+	
+<div class="footer">
+	<h2>My text website.</h2>
+</div>
+	
+</body>
+</html>
